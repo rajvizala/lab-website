@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUBS - Publications</title>
+    <title>TRAIL - Publications</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,42 +14,43 @@
         }
         .top-section {
             background-color: #f0f8ff;
-            padding: 20px;
+            padding: 10px 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav {
-            text-align: right;
-            margin-bottom: 20px;
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo-title h1 {
+            font-size: 35px;
+            margin: 0;
+            color: #0056b3;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
-            margin-left: 20px;
+            margin-left: 25px;
         }
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             transition: color 0.3s ease;
+            font-size: 25px;
         }
         nav ul li a:hover {
             color: #0056b3;
-        }
-        .logo-title {
-            text-align: center;
-        }
-        .logo-title h1 {
-            font-size: 28px;
-            margin: 0;
-            color: #0056b3;
-        }
-        .logo-title p {
-            font-size: 16px;
-            margin: 5px 0 0;
-            color: #666;
         }
         main {
             max-width: 1200px;
@@ -61,15 +62,22 @@
             border-bottom: 2px solid #0056b3;
             padding-bottom: 10px;
         }
-        .publications {
-            list-style-type: none;
-            padding: 0;
+        .year-section {
+            margin-bottom: 40px;
+        }
+        .year-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
         .publication {
             background-color: #f9f9f9;
             border-radius: 8px;
             padding: 15px;
-            margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -79,6 +87,7 @@
         }
         .publication h3 {
             margin-top: 0;
+            font-size: 16px;
             color: #0056b3;
         }
         .publication h3 a {
@@ -91,15 +100,13 @@
         }
         .publication p {
             margin-bottom: 5px;
+            font-size: 14px;
         }
         .publication .authors {
             font-style: italic;
         }
         .publication .journal {
             font-weight: bold;
-        }
-        .publication .year {
-            color: #666;
         }
         footer {
             background-color: #f0f8ff;
@@ -111,132 +118,232 @@
 </head>
 <body>
     <div class="top-section">
+        <div class="logo-title">
+            <img src="static/lab-logojpeg.jpeg" alt="TRAIL Logo">
+            <a href="index.html" style="text-decoration: none;"><h1>TRAIL</h1></a>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="students.html">Studnets</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="papers.html">papers</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="teaching.html">teaching</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="news.html">news</a></li>
             </ul>
         </nav>
-        <div class="logo-title">
-            <h1>Center for Unified Biometrics and Sensors (CUBS)</h1>
-            <p>Advancing Biometrics and Trustworthy AI Research</p>
-        </div>
     </div>
-
     <main>
         <h2>Publications</h2>
-        <ul class="publications">
-            <li class="publication">
-                <h3><a href="https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w1/Kushwaha_Disguised_Faces_in_CVPR_2018_paper.pdf" target="_blank">Recognizing disguised faces in the wild</a></h3>
-                <p class="authors">M Singh, R Singh, M Vatsa, N K Ratha, R Chellappa</p>
-                <p class="journal">IEEE Transactions on Biometrics, Behavior, and Identity Science 1(2), 97--108</p>
-                <p class="year">2019</p>
-            </li>
-            <li class="publication">
-                <h3><a href=https://www.researchgate.net/publication/331969148_Detecting_and_Mitigating_Adversarial_Perturbations_for_Robust_Face_Recognition2" target="_blank">Detecting and mitigating adversarial perturbations for robust face recognition</a></h3>
-                <p class="authors">G Goswami, A Agarwal, N Ratha, R Singh, M Vatsa</p>
-                <p class="journal">International Journal of Computer Vision 127 (6-7), 719-742</p>
-                <p class="year">2019</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://engineering.jhu.edu/vpatel36/wp-content/uploads/2018/08/SPM_CB_v6.pdf" target="_blank">Cancelable Biometrics: A review</a></h3>
-                <p class="authors">Patel, V.M.; Ratha, N.K.; Chellappa, R.</p>
-                <p class="journal">Signal Processing Magazine, IEEE, vol.32, no.5, pp.54-65</p>
-                <p class="year">2015</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://pubmed.ncbi.nlm.nih.gov/25314702/" target="_blank">Improving Cross-Resolution Face Matching Using Ensemble-Based Co-Transfer Learning</a></h3>
-                <p class="authors">H. S. Bhatt, R. Singh, M. Vatsa, N. K. Ratha</p>
-                <p class="journal">IEEE Trans. On Image Processing, Vol. 23, No. 12, pp. 5654—5668</p>
-                <p class="year">2014</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/abstract/document/7095156" target="_blank">Big Data approach to biometric-based identity analytics</a></h3>
-                <p class="authors">N. K. Ratha, J. H. Connell and S. Pankanti</p>
-                <p class="journal">IBM Journal of Research and Development, vol. 59, no. 2/3, pp. 4:1-4:11</p>
-                <p class="year">2015</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/6032773" target="_blank">Practical computer vision: Example techniques and challenges</a></h3>
-                <p class="authors">Pankanti, S.; Brown, L.; Connell, J.; Datta, A.; Fan, Q.; Feris, R.; Haas, N.; Li, Y.; Ratha, N.; Trinh, H.</p>
-                <p class="journal">IBM Journal of Research and Development, vol.55, no.5, pp.3:1-3:12</p>
-                <p class="year">2011</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/5719618" target="_blank">Secure and Robust Iris Recognition Using Random Projections and Sparse Representations</a></h3>
-                <p class="authors">Pillai, J.K.; Patel, V.M.; Chellappa, R.; Ratha, N.K.</p>
-                <p class="journal">Pattern Analysis and Machine Intelligence, IEEE Transactions on, vol.33, no.9, pp.1877-1893</p>
-                <p class="year">2011</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/4107561" target="_blank">Generating cancelable fingerprint templates</a></h3>
-                <p class="authors">N. K. Ratha, S. Chikkerur, J. H. Connell and R. M. Bolle</p>
-                <p class="journal">IEEE Trans. on PAMI, Vol. 29, No. 4, pp. 561—572</p>
-                <p class="year">2007</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/1262032" target="_blank">Dynamic Behavior Analysis in Compressed Fingerprint Videos</a></h3>
-                <p class="authors">C. Dorai, N. K. Ratha and R. M. Bolle</p>
-                <p class="journal">IEEE Trans. CSVT, Vol. 14, No. 1, pp. 58—74</p>
-                <p class="year">2004</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S1077314203001267" target="_blank">Error analysis of pattern recognition systems––the subsets bootstrap</a></h3>
-                <p class="authors">R M. Bolle, N. K. Ratha and S. Pankanti</p>
-                <p class="journal">Computer Vision and Image Understanding, Vol. 93, No. 1, pp. 1-33</p>
-                <p class="year">2004</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865503000801" target="_blank">Biometrics break-ins and band aids</a></h3>
-                <p class="authors">N. K. Ratha, J. H. Connell and R. M. Bolle</p>
-                <p class="journal">Pattern Recognition Letters, Vol. 24, No. 13, pp. 2105-2113</p>
-                <p class="year">2003</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://cse.msu.edu/~rossarun/BiometricsTextBook/Papers/Security/Bolle_BiometricPerils_PR02.pdf" target="_blank">Biometric Perils and Patches</a></h3>
-                <p class="authors">R. M. Bolle, J. H. Connell and N. K. Ratha</p>
-                <p class="journal">Pattern Recognition, Vol. 35, No. 12, pp. 2727-2738</p>
-                <p class="year">2002</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/5386935" target="_blank">Enhancing security and privacy in biometrics-based authentication systems</a></h3>
-                <p class="authors">N. K. Ratha, J. H. Connell and R. M. Bolle</p>
-                <p class="journal">IBM Systems Journal, Vol. 40, No. 3, pp. 614-634</p>
-                <p class="year">2001</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/744833" target="_blank">Computer Vision Algorithms on Reconfigurable Logic Arrays</a></h3>
-                <p class="authors">N. K. Ratha and A.K. Jain</p>
-                <p class="journal">IEEE Trans. Parallel and Distributed Systems, Vol. 10, No. 1, pp. 29-43</p>
-                <p class="year">1999</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320396000684" target="_blank">Object Detection Using Gabor Filters</a></h3>
-                <p class="authors">A.K. Jain, N. K. Ratha and S. Lakshmanan</p>
-                <p class="journal">Pattern Recognition, Vol. 30, No. 2, pp. 295-309</p>
-                <p class="year">1997</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://ieeexplore.ieee.org/document/531800" target="_blank">A Real-time Matching System for Large Fingerprint Databases</a></h3>
-                <p class="authors">N. K. Ratha, S. Chen, K. Karu and A.K. Jain</p>
-                <p class="journal">IEEE Trans. Pattern Analysis and Machine Intelligence, Vol. 18, 8, pp. 799-813</p>
-                <p class="year">1996</p>
-            </li>
-            <li class="publication">
-                <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/0031320395000393" target="_blank">Adaptive Flow Orientation Based Feature Extraction in Fingerprint Images</a></h3>
-                <p class="authors">N. K. Ratha, S. Chen and A.K. Jain</p>
-                <p class="journal">Pattern Recognition, Vol. 28, pp. 1657-1672</p>
-                <p class="year">1995</p>
-            </li>
-        </ul>
+        <div class="year-section">
+            <h3 class="year-title">2024</h3>
+            <div class="publications-grid">
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Face Morphing Detection in Social Media Content</a></h3>
+                    <p class="authors">A Agarwal, N Ratha</p>
+                    <p class="journal">2024 IEEE International Conference on Image Processing (ICIP), 801-806</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Multi-modal lung capacity measurement for respiratory illness prediction</a></h3>
+                    <p class="authors">S Thomas, NK Ratha, IUH Connell</p>
+                    <p class="journal">US Patent 12,023,146</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Deepfake: Classifiers, fairness, and demographically robust algorithm</a></h3>
+                    <p class="authors">A Agarwal, N Ratha</p>
+                    <p class="journal">2024 IEEE 18th International Conference on Automatic Face and Gesture</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Confidential and Protected Disease Classifier using Fully Homomorphic Encryption</a></h3>
+                    <p class="authors">A Malik, N Ratha, B Yalavarthi, T Sharma, A Kaushik, C Jutta</p>
+                    <p class="journal">arXiv preprint arXiv:2405.02790</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Enhancing Privacy and Security of Autonomous UAV Navigation</a></h3>
+                    <p class="authors">V Aggarwal, AR Kaushik, C Jutta, N Ratha</p>
+                    <p class="journal">arXiv preprint arXiv:2404.17225</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Enhancing Privacy in Face Analytics Using Fully Homomorphic Encryption</a></h3>
+                    <p class="authors">B Yalavarthi, AR Kaushik, A Ross, V Boddeti, N Ratha</p>
+                    <p class="journal">arXiv preprint arXiv:2404.16255</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Corruption depth: Analysis of DNN depth for misclassification</a></h3>
+                    <p class="authors">A Agarwal, M Vatsa, R Singh, N Ratha</p>
+                    <p class="journal">Neural Networks 172, 106013</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Entity learning recognition</a></h3>
+                    <p class="authors">G Goswami, SU Pankanti, NK Ratha</p>
+                    <p class="journal">US Patent 11,941,536</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Secure re-encryption of homomorphically encrypted data</a></h3>
+                    <p class="authors">NK Ratha, K Nandakumar, S Pankanti</p>
+                    <p class="journal">US Patent 11,902,424</p>
+                </div>
+            </div>
+        </div>
+        <div class="year-section">
+            <h3 class="year-title">2023</h3>
+            <div class="publications-grid">
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Fully Homomorphic Encryption Operators for Score and Decision Fusion in Biometric Identification</a></h3>
+                    <p class="authors">T Sharma, M Wason, V Boddeti, A Ross, N Ratha</p>
+                    <p class="journal">2023 IEEE International Workshop on Information Forensics and Security (WIFS)</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Secure matching and identification of patterns</a></h3>
+                    <p class="authors">S Pankanti, K Nandakumar, NK Ratha, S Halevi</p>
+                    <p class="journal">US Patent 11,816,142</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Active Multi-Modal Approach for Enhanced User Recognition in Social Robots</a></h3>
+                    <p class="authors">N Kale, N Ratha</p>
+                    <p class="journal">2023 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1-5</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Secure Vascular Biometric Recognition</a></h3>
+                    <p class="authors">C Humphry, SRR Pushparaj, N Ratha</p>
+                    <p class="journal">2023 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1-5</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Image Enhancement for Unconstrained Environments</a></h3>
+                    <p class="authors">S Bagchi, N Ratha</p>
+                    <p class="journal">2023 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1-5</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Attention Guided Multi-attribute Architecture For Deepfake Detection</a></h3>
+                    <p class="authors">R Sharma, B Jawade, A Agarwal, S Setlur, N Ratha</p>
+                    <p class="journal">2023 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1-4</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Benchmarking Image Classifiers for Physical Out-of-Distribution Examples Detection</a></h3>
+                    <p class="authors">A Agarwal, N Ratha</p>
+                    <p class="journal">2023 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Decision tree-based inference on homomorphically-encrypted data without bootstrapping</a></h3>
+                    <p class="authors">K Sarpatwar, NK Ratha, K Shanmugam, K Nandakumar, S Pankanti</p>
+                    <p class="journal">US Patent 11,764,941</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Mitigating false recognition of altered inputs in convolutional neural networks</a></h3>
+                    <p class="authors">G Goswami, S Pankanti, NK Ratha, R Singh, M Vatsa</p>
+                    <p class="journal">US Patent 11,763,159</p>
+                </div>
+        </div>
+        <div class="year-section">
+            <h3 class="year-title">2022</h3>
+            <div class="publications-grid">
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Privacy-enhanced decision tree-based inference on homomorphically-encrypted data</a></h3>
+                    <p class="authors">NK Ratha, K Sarpatwar, K Shanmugam, S Pankanti, K Nandakumar</p>
+                    <p class="journal">US Patent 11,502,820</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">On Deep Learning for Dorsal Hand Vein Recognition</a></h3>
+                    <p class="authors">S Bagchi, G Chanda, A Agarwal, N Ratha</p>
+                    <p class="journal">2022 IEEE Western New York Image and Signal Processing Workshop (WNYISPW), 1-4</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Benchmarking Robustness Beyond lp Norm Adversaries</a></h3>
+                    <p class="authors">A Agarwal, N Ratha, M Vatsa, R Singh</p>
+                    <p class="journal">European Conference on Computer Vision, 342-359</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">3 Deep Learning in Computer Vision</a></h3>
+                    <p class="authors">A Agarwal, N Ratha</p>
+                    <p class="journal">Applications of Artificial Intelligence, Big Data and Internet of Things in</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Deep Learning in Computer Vision: Progress and Threats</a></h3>
+                    <p class="authors">A Agarwal, N Ratha</p>
+                    <p class="journal">Applications of Artificial Intelligence, Big Data and Internet of Things in</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">RidgeBase: A cross-sensor multi-finger contactless fingerprint dataset</a></h3>
+                    <p class="authors">B Jawade, DD Mohan, S Setlur, N Ratha, V Govindaraju</p>
+                    <p class="journal">2022 IEEE International Joint Conference on Biometrics (IJCB), 1-9</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">HEFT: Homomorphically encrypted fusion of biometric templates</a></h3>
+                    <p class="authors">L Sperling, N Ratha, A Ross, VN Boddeti</p>
+                    <p class="journal">2022 IEEE International Joint Conference on Biometrics (IJCB), 1-10</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Ibattack: Being cautious about data labels</a></h3>
+                    <p class="authors">A Agarwal, R Singh, M Vatsa, N Ratha</p>
+                    <p class="journal">IEEE Transactions on Artificial Intelligence 4 (6), 1484-1493</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Crafting adversarial perturbations via transformed image component swapping</a></h3>
+                    <p class="authors">A Agarwal, N Ratha, M Vatsa, R Singh</p>
+                    <p class="journal">IEEE Transactions on Image Processing 31, 7338-7349</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Encrypted data model verification</a></h3>
+                    <p class="authors">S Halevi, S Pankanti, K Nandakumar, NK Ratha</p>
+                    <p class="journal">US Patent 11,354,539</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Secure multi-party learning and inferring insights based on encrypted data</a></h3>
+                    <p class="authors">K Nandakumar, N Ratha, S Halevi, S Pankanti</p>
+                    <p class="journal">US Patent 11,343,068</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Anonymizing biometric data for use in a security system</a></h3>
+                    <p class="authors">IUH Connell, FA Maymir-Ducharme, NK Ratha</p>
+                    <p class="journal">US Patent 11,336,643</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Secure matching and identification of patterns</a></h3>
+                    <p class="authors">S Pankanti, K Nandakumar, NK Ratha, S Halevi</p>
+                    <p class="journal">US Patent 11,321,382</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Post hoc bias compensation</a></h3>
+                    <p class="authors">IUH Connell, NK Ratha, S Pankanti</p>
+                    <p class="journal">US Patent 11,301,504</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Configuring classroom physical resources</a></h3>
+                    <p class="authors">SS Darnell, SU Pankanti, NK Ratha, K Weldemariam</p>
+                    <p class="journal">US Patent 11,301,944</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Biometric token for blockchain</a></h3>
+                    <p class="authors">SS Darnell, K Nandakumar, S Pankanti, NK Ratha</p>
+                    <p class="journal">US Patent 11,244,316</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">System, method, and recording medium for identity fraud prevention in secure transactions using multi-factor verification</a></h3>
+                    <p class="authors">JH Connell, NK Ratha, R Sicconi</p>
+                    <p class="journal">US Patent App. 17/499,974</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">PPDL-privacy preserving deep learning using homomorphic encryption</a></h3>
+                    <p class="authors">N Jain, K Nandakumar, N Ratha, S Pankanti, U Kumar</p>
+                    <p class="journal">Proceedings of the 5th Joint International Conference on Data Science</p>
+                </div>
+                <div class="publication">
+                    <h3><a href="#" target="_blank">Exploring robustness connection between artificial and natural adversarial examples</a></h3>
+                    <p class="authors">A Agarwal, N Ratha, M Vatsa, R Singh</p>
+                    <p class="journal">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern</p>
+                </div>
+            </div>
+            </div>
     </main>
-
     <footer>
-        <p>&copy; 2024 Center for Unified Biometrics and Sensors (CUBS). All rights reserved.</p>
+        <div class="footer-content"></div>
+            <h3>Contact Us</h3>
+            <p>113K Davis Hall</p>
+            <p>Buffalo NY, 14260</p>
+            <p>Phone: <a href="tel:+17166451564">(716) 645-1564</a></p>
+            <p>Email: <a href="mailto:nratha@buffalo.edu">nratha@buffalo.edu</a></p>
+        </div>
+        <p>&copy; 2024 TRAIL. All rights reserved.</p>
     </footer>
 </body>
 </html>

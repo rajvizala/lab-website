@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUBS - Research Areas</title>
+    <title>TRAIL - Research Areas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,15 +15,26 @@
         .top-section {
             background-color: #f0f8ff;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-title {
+            margin-right: 20px;
+        }
+        .logo-title h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #0056b3;
         }
         nav {
-            text-align: right;
-            margin-bottom: 20px;
+            flex-grow: 1;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            text-align: right;
         }
         nav ul li {
             display: inline;
@@ -37,19 +48,6 @@
         }
         nav ul li a:hover {
             color: #0056b3;
-        }
-        .logo-title {
-            text-align: center;
-        }
-        .logo-title h1 {
-            font-size: 28px;
-            margin: 0;
-            color: #0056b3;
-        }
-        .logo-title p {
-            font-size: 16px;
-            margin: 5px 0 0;
-            color: #666;
         }
         main {
             max-width: 1200px;
@@ -90,6 +88,9 @@
 </head>
 <body>
     <div class="top-section">
+        <div class="logo-title">
+            <h1>TRAIL</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -97,13 +98,9 @@
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="awards.html">Awards</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="students.html">Studnets</a></li>
+                <li><a href="students.html">Students</a></li>
             </ul>
         </nav>
-        <div class="logo-title">
-            <h1>Center for Unified Biometrics and Sensors (CUBS)</h1>
-            <p>Advancing Biometrics and Trustworthy AI Research</p>
-        </div>
     </div>
 
     <main>

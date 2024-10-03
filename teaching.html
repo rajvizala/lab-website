@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUBS - Teaching</title>
+    <title>TRAIL - Teaching</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,42 +14,43 @@
         }
         .top-section {
             background-color: #f0f8ff;
-            padding: 20px;
+            padding: 10px 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav {
-            text-align: right;
-            margin-bottom: 20px;
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo-title h1 {
+            font-size: 35px;
+            margin: 0;
+            color: #0056b3;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
-            margin-left: 20px;
+            margin-left: 25px;
         }
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             transition: color 0.3s ease;
+            font-size: 25px;
         }
         nav ul li a:hover {
             color: #0056b3;
-        }
-        .logo-title {
-            text-align: center;
-        }
-        .logo-title h1 {
-            font-size: 28px;
-            margin: 0;
-            color: #0056b3;
-        }
-        .logo-title p {
-            font-size: 16px;
-            margin: 5px 0 0;
-            color: #666;
         }
         main {
             max-width: 1200px;
@@ -98,20 +99,20 @@
 </head>
 <body>
     <div class="top-section">
+        <div class="logo-title">
+            <img src="static/lab-logojpeg.jpeg" alt="TRAIL Logo">
+            <a href="index.html" style="text-decoration: none;"><h1>TRAIL</h1></a>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="students.html">Studnets</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="papers.html">papers</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="teaching.html">teaching</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="news.html">news</a></li>
             </ul>
         </nav>
-        <div class="logo-title">
-            <h1>Center for Unified Biometrics and Sensors (CUBS)</h1>
-            <p>Advancing Biometrics and Trustworthy AI Research</p>
-        </div>
     </div>
 
     <main>
@@ -149,7 +150,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Center for Unified Biometrics and Sensors (CUBS). All rights reserved.</p>
+        <div class="footer-content"></div>
+            <h3>Contact Us</h3>
+            <p>113K Davis Hall</p>
+            <p>Buffalo NY, 14260</p>
+            <p>Phone: <a href="tel:+17166451564">(716) 645-1564</a></p>
+            <p>Email: <a href="mailto:nratha@buffalo.edu">nratha@buffalo.edu</a></p>
+        </div>
+        <p>&copy; 2024 TRAIL. All rights reserved.</p>
     </footer>
 </body>
 </html>
