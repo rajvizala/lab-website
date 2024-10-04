@@ -107,7 +107,21 @@
             padding: 10px;
             margin-top: 40px;
         }
+        .social-links {
+            margin-top: 10px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #003d82;
+        }
+        
     </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="top-section">
@@ -117,12 +131,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="papers.html">papers</a></li>
-                <li><a href="projects.html">projects</a></li>
+                <li><a href="publications.html">papers</a></li>
+                <!-- <li><a href="projects.html">projects</a></li> -->
                 <li><a href="teaching.html">teaching</a></li>
                 <li><a href="team.html">team</a></li>
                 <li><a href="news.html">news</a></li>
+                <li><a href="values.html">lab values</a></li>
+
             </ul>
         </nav>
     </div>
@@ -134,8 +149,11 @@
                 <img src="static/nalini_face (1).jpg" alt="Faculty 1">
                 <h3>Nalini K. Ratha</h3>
                 <p>Professor</p>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=mIPd9DkAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/nalini-ratha-62ba111/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <!-- Add more faculty members as needed -->
         </div>
 
         <h2>Current Students</h2>
@@ -144,42 +162,40 @@
                 <img src="static/arjun-img.jpeg" alt="Student 1">
                 <h3>Arjun Ramesh Kaushik</h3>
                 <p>Ph.D. Student</p>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?user=F4gJbXAAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/arjun-ramesh-kaushik/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
             <div class="team-member">
-                <img src="git_lab_web\static\bharat-chandra.jpeg" alt="Student 2">
-                <h3>Bharat Chandra</h3>
+                <img src="static/susim-roy.jpeg" alt="Student 3">
+                <h3>Susim Roy</h3>
                 <p>Masters Student</p>
+                <div class="social-links">
+                    <!-- <a href="https://scholar.google.com/citations?user=SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
+                    <a href="https://www.linkedin.com/in/susim-mukul-roy/?originalSubdomain=in" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
             <div class="team-member">
-                <img src="path/to/student3.jpg" alt="Student 3">
-                <h3>Carol Brown</h3>
-                <p>Ph.D. Student</p>
+                <img src="static/deekshit.jpeg" alt="Student 3">
+                <h3>Deekshit</h3>
+                <p>Masters Student</p>
+                <div class="social-links">
+                    <!-- <a href="https://scholar.google.com/citations?user=SCHOLAR_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a> -->
+                    <a href="https://www.linkedin.com/in/LINKEDIN_ID" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <!-- Add more current students as needed -->
-        </div>
-
-        <h2>Alumni</h2>
-        <div class="team-section">
-            <div class="team-member">
-                <img src="path/to/alumni1.jpg" alt="Alumni 1">
-                <h3>David Lee</h3>
-                <p>Ph.D. 2022</p>
-            </div>
-            <div class="team-member">
-                <img src="path/to/alumni2.jpg" alt="Alumni 2">
-                <h3>Emma Garcia</h3>
-                <p>Masters 2021</p>
-            </div>
-            <div class="team-member">
-                <img src="path/to/alumni3.jpg" alt="Alumni 3">
-                <h3>Frank Chen</h3>
-                <p>Ph.D. 2020</p>
-            </div>
-            <!-- Add more alumni as needed -->
-        </div>
+        </div> 
     </main>
 
     <footer>
+        <div class="footer-content"></div>
+            <h3>Contact Us</h3>
+            <p>113K Davis Hall</p>
+            <p>Buffalo NY, 14260</p>
+            <p>Phone: <a href="tel:+17166451564">(716) 645-1564</a></p>
+            <p>Email: <a href="mailto:nratha@buffalo.edu">nratha@buffalo.edu</a></p>
+        </div>
         <p>&copy; 2024 TRAIL Lab. All rights reserved.</p>
     </footer>
 </body>
