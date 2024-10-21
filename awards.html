@@ -14,42 +14,43 @@
         }
         .top-section {
             background-color: #f0f8ff;
-            padding: 20px;
+            padding: 10px 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav {
-            text-align: right;
-            margin-bottom: 20px;
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo-title h1 {
+            font-size: 35px;
+            margin: 0;
+            color: #0056b3;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
-            margin-left: 20px;
+            margin-left: 25px;
         }
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             transition: color 0.3s ease;
+            font-size: 20px;
         }
         nav ul li a:hover {
             color: #0056b3;
-        }
-        .logo-title {
-            text-align: center;
-        }
-        .logo-title h1 {
-            font-size: 28px;
-            margin: 0;
-            color: #0056b3;
-        }
-        .logo-title p {
-            font-size: 16px;
-            margin: 5px 0 0;
-            color: #666;
         }
         main {
             max-width: 1200px;
@@ -60,6 +61,10 @@
             color: #0056b3;
             border-bottom: 2px solid #0056b3;
             padding-bottom: 10px;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
         }
         .awards {
             list-style-type: none;
@@ -98,24 +103,27 @@
 </head>
 <body>
     <div class="top-section">
+        <div class="logo-title">
+            <img src="static/lab-logojpeg.jpeg" alt="TRAIL Logo">
+            <a href="index.html" style="text-decoration: none;"><h1>TRAIL</h1></a>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="students.html">Studnets</a></li>
+                <li><a href="publications.html">publications</a></li>
+                <li><a href="teaching.html">teaching</a></li>
+                <li><a href="team.html">team</a></li>
+                <li><a href="news.html">news</a></li>
+                <li><a href="values.html">lab values</a></li>
+                <li><a href="awards.html">awards</a></li>
+
             </ul>
         </nav>
-        <div class="logo-title">
-            <h1>Center for Unified Biometrics and Sensors (CUBS)</h1>
-            <p>Advancing Biometrics and Trustworthy AI Research</p>
-        </div>
     </div>
 
     <main>
         <h2>Awards and Recognition</h2>
+
+        <h3>Awards Received by Professors</h3>
         <ul class="awards">
             <li class="award">
                 <h3>IEEE Biometrics Council Leadership Award</h3>
@@ -126,11 +134,11 @@
                 <p class="year">2019</p>
             </li>
             <li class="award">
-                <h3>IBM 22nd Invention Plateau achievement award</h3>
+                <h3>IBM 22nd Invention Plateau Achievement Award</h3>
                 <p class="year">2019</p>
             </li>
             <li class="award">
-                <h3>IBM 21st Invention Plateau achievement award</h3>
+                <h3>IBM 21st Invention Plateau Achievement Award</h3>
                 <p class="year">2019</p>
             </li>
             <li class="award">
@@ -138,35 +146,35 @@
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM 20th Invention Plateau achievement award</h3>
+                <h3>IBM 20th Invention Plateau Achievement Award</h3>
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM 19th Invention Plateau achievement award</h3>
+                <h3>IBM 19th Invention Plateau Achievement Award</h3>
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM 18th Invention Plateau achievement award</h3>
+                <h3>IBM 18th Invention Plateau Achievement Award</h3>
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM 17th Invention Plateau achievement award</h3>
+                <h3>IBM 17th Invention Plateau Achievement Award</h3>
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM 16th Invention Plateau achievement award</h3>
+                <h3>IBM 16th Invention Plateau Achievement Award</h3>
                 <p class="year">2018</p>
             </li>
             <li class="award">
-                <h3>IBM Fifteenth Invention Plateau achievement award</h3>
+                <h3>IBM Fifteenth Invention Plateau Achievement Award</h3>
                 <p class="year">2016</p>
             </li>
             <li class="award">
-                <h3>IBM Thirteenth Invention Plateau achievement award</h3>
+                <h3>IBM Thirteenth Invention Plateau Achievement Award</h3>
                 <p class="year">2015</p>
             </li>
             <li class="award">
-                <h3>IBM Ninth Invention Plateau achievement award</h3>
+                <h3>IBM Ninth Invention Plateau Achievement Award</h3>
                 <p class="year">2014</p>
             </li>
             <li class="award">
@@ -178,7 +186,7 @@
                 <p class="year">2008</p>
             </li>
             <li class="award">
-                <h3>IBM Eighth Invention Plateau achievement award</h3>
+                <h3>IBM Eighth Invention Plateau Achievement Award</h3>
                 <p class="year">2008</p>
             </li>
             <li class="award">
@@ -186,43 +194,43 @@
                 <p class="year">2008</p>
             </li>
             <li class="award">
-                <h3>IBM Seventh Invention Plateau achievement award</h3>
+                <h3>IBM Seventh Invention Plateau Achievement Award</h3>
                 <p class="year">2008</p>
             </li>
             <li class="award">
-                <h3>IBM Fifth Invention Plateau achievement award</h3>
+                <h3>IBM Fifth Invention Plateau Achievement Award</h3>
                 <p class="year">2007</p>
             </li>
             <li class="award">
-                <h3>IBM Fourth Invention Plateau achievement award</h3>
+                <h3>IBM Fourth Invention Plateau Achievement Award</h3>
                 <p class="year">2004</p>
             </li>
             <li class="award">
-                <h3>IBM Third Invention Plateau achievement award</h3>
+                <h3>IBM Third Invention Plateau Achievement Award</h3>
                 <p class="year">2001</p>
             </li>
             <li class="award">
-                <h3>IBM Second Invention Plateau achievement award</h3>
+                <h3>IBM Second Invention Plateau Achievement Award</h3>
                 <p class="year">2000</p>
             </li>
             <li class="award">
-                <h3>IBM First Invention Plateau achievement award</h3>
+                <h3>IBM First Invention Plateau Achievement Award</h3>
                 <p class="year">1999</p>
             </li>
             <li class="award">
-                <h3>IBM Research Division award</h3>
+                <h3>IBM Research Division Award</h3>
                 <p class="year">1998</p>
             </li>
             <li class="award">
-                <h3>IBM first patent application invention achievement award</h3>
+                <h3>IBM First Patent Application Invention Achievement Award</h3>
                 <p class="year">1997</p>
             </li>
             <li class="award">
-                <h3>CMC Appreciation Award for successful completion of FACTS project</h3>
+                <h3>CMC Appreciation Award for Successful Completion of FACTS Project</h3>
                 <p class="year">1991</p>
             </li>
             <li class="award">
-                <h3>First Prize, technical paper contest on chance print fingerprint matching from Ministry of Home Affairs, India</h3>
+                <h3>First Prize, Technical Paper Contest on Chance Print Fingerprint Matching from Ministry of Home Affairs, India</h3>
                 <p class="year">1991</p>
                 <p>(with N. N. Murthy and S. Ramesh)</p>
             </li>
@@ -231,7 +239,28 @@
                 <p class="year">1977-82</p>
             </li>
             <li class="award">
-                <h3>First in order of merit, Intermediate Science, Berhampur University</h3>
+                <h3>First in Order of Merit, Intermediate Science, Berhampur University</h3>
+                <p class="year">1977</p>
+            </li>
+            <li class="award">
+                <h3>National Merit Scholarship, Govt. of India</h3>
+                <p class="year">1975-77</p>
+            </li>
+        </ul>
+
+        <h3>Awards Received by Students</h3>
+        <ul class="awards">
+            <li class="award">
+                <h3>First Prize, Technical Paper Contest on Chance Print Fingerprint Matching from Ministry of Home Affairs, India</h3>
+                <p class="year">1991</p>
+                <p>(with N. N. Murthy and S. Ramesh)</p>
+            </li>
+            <li class="award">
+                <h3>National Merit Scholarship, Govt. of India</h3>
+                <p class="year">1977-82</p>
+            </li>
+            <li class="award">
+                <h3>First in Order of Merit, Intermediate Science, Berhampur University</h3>
                 <p class="year">1977</p>
             </li>
             <li class="award">
@@ -242,7 +271,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Center for Unified Biometrics and Sensors (CUBS). All rights reserved.</p>
+        <div class="footer-content"></div>
+            <h3>Contact Us</h3>
+            <p>113K Davis Hall</p>
+            <p>Buffalo NY, 14260</p>
+            <p>Phone: <a href="tel:+17166451564">(716) 645-1564</a></p>
+            <p>Email: <a href="mailto:nratha@buffalo.edu">nratha@buffalo.edu</a></p>
+        </div>
+        <p>&copy; 2024 TRAIL. All rights reserved.</p>
     </footer>
 </body>
 </html>
