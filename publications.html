@@ -2700,7 +2700,8 @@
     <ul class="publication-list">
      <li class="publication-item">
       <div class="publication-title">
-       Entity learning recognition
+       <a href="https://patents.google.com/patent/US12093839B2/en?q=(Entity+Learning+Recognition)&inventor=Nalini+Ratha&oq=Entity+Learning+Recognition++Nalini+Ratha"></a>
+     Entity learning recognition
       </div>
       <div class="publication-authors">
        Goswami, Gaurav; Pankanti, Sharathchandra Umapathirao; Ratha, Nalini K;
@@ -4885,7 +4886,7 @@
     Contact Us
    </h3>
    <p>
-    113A Davis Hall
+    113X Davis Hall
    </p>
    <p>
     Buffalo NY, 14260
@@ -4907,18 +4908,39 @@
    </p>
   </footer>
   <script>
-    
-    function searchPublication(title, authors) {
-    // Remove special characters and prepare the search query
+  function searchPublication(title, authors, type) {
     const cleanTitle = title.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
-    const cleanAuthors = authors.split(';')[0].trim(); // Take first author
     
-    // Construct the Google Scholar search URL
-    const searchQuery = encodeURIComponent(`${cleanTitle} ${cleanAuthors}`);
-    const scholarUrl = `https://scholar.google.com/scholar?q=${searchQuery}`;
-    
-    // Open in new tab
-    window.open(scholarUrl, '_blank');
+    // Format full author names
+    const cleanAuthors = authors
+        .split(';')
+        .map(author => {
+            if (!author.trim()) return '';
+            const [lastName, firstName] = author.split(',').map(part => part.trim());
+            return firstName ? `${firstName} ${lastName}` : lastName;
+        })
+        .filter(name => name)
+        .join(' ');
+
+    // Always start with Google Scholar
+    const scholarQuery = encodeURIComponent(`${cleanTitle} ${cleanAuthors}`);
+    const scholarUrl = `https://scholar.google.com/scholar?q=${scholarQuery}`;
+
+    // For patents, we'll check results count after opening Scholar
+    if (type === 'patent') {
+        window.open(scholarUrl, '_blank', 'noopener,noreferrer');
+        
+        // If user finds multiple results, they can click again to go to Patents
+        titleDiv.addEventListener('dblclick', () => {
+            const patentQuery = encodeURIComponent(cleanTitle);
+            const inventorQuery = encodeURIComponent(cleanAuthors);
+            const patentUrl = `https://patents.google.com/?q=${patentQuery}&inventor=${inventorQuery}&oq=${patentQuery}`;
+            window.open(patentUrl, '_blank');
+        });
+    } else {
+        // Non-patent publications just use Scholar
+        window.open(scholarUrl, '_blank');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -4927,16 +4949,29 @@ document.addEventListener('DOMContentLoaded', function() {
     publications.forEach(pub => {
         const titleDiv = pub.querySelector('.publication-title');
         const authorsDiv = pub.querySelector('.publication-authors');
+        const isPatent = pub.closest('.publication-category')?.querySelector('.category-title')?.textContent.includes('Patents') || false;
+        const hasExistingLink = titleDiv?.querySelector('a') || titleDiv?.tagName === 'A';
         
-        if (titleDiv && authorsDiv) {
+        if (titleDiv && authorsDiv && !hasExistingLink) {
             titleDiv.style.cursor = 'pointer';
             titleDiv.addEventListener('click', () => {
                 searchPublication(
                     titleDiv.textContent,
-                    authorsDiv.textContent
+                    authorsDiv.textContent,
+                    isPatent ? 'patent' : 'publication'
                 );
             });
         }
+        else if (hasExistingLink) {
+            
+            // Get the anchor tag
+            const link = titleDiv.tagName === 'A' ? titleDiv : titleDiv.querySelector('a');
+            const href = link.getAttribute('href');
+            
+            titleDiv.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior
+                window.open(href, '_blank'); // Open in new tab
+            });}
     });
 });
   </script>
