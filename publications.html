@@ -185,6 +185,15 @@
             font-size: 0.8em;
             margin-left: 10px;
         }
+        .publication-title {
+        color: #0056b3;
+        cursor: pointer;
+        text-decoration: none;
+        }
+
+        .publication-title:hover {
+        text-decoration: underline;
+        }
   </style>
  </head>
  <body>
@@ -4897,5 +4906,39 @@
     © 2024 TRAIL. All rights reserved.
    </p>
   </footer>
+  <script>
+    
+    function searchPublication(title, authors) {
+    // Remove special characters and prepare the search query
+    const cleanTitle = title.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
+    const cleanAuthors = authors.split(';')[0].trim(); // Take first author
+    
+    // Construct the Google Scholar search URL
+    const searchQuery = encodeURIComponent(`${cleanTitle} ${cleanAuthors}`);
+    const scholarUrl = `https://scholar.google.com/scholar?q=${searchQuery}`;
+    
+    // Open in new tab
+    window.open(scholarUrl, '_blank');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const publications = document.querySelectorAll('.publication-item');
+    
+    publications.forEach(pub => {
+        const titleDiv = pub.querySelector('.publication-title');
+        const authorsDiv = pub.querySelector('.publication-authors');
+        
+        if (titleDiv && authorsDiv) {
+            titleDiv.style.cursor = 'pointer';
+            titleDiv.addEventListener('click', () => {
+                searchPublication(
+                    titleDiv.textContent,
+                    authorsDiv.textContent
+                );
+            });
+        }
+    });
+});
+  </script>
  </body>
 </html>
