@@ -16,14 +16,14 @@
         }
 
         .side-image {
-            flex: 0 0 280px;
+            flex: 0 0 350px;
             position: sticky;
             top: 20px;
         }
 
         .side-image img {
             width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -56,6 +56,7 @@
             background-color: #f0f8ff;
             padding: 20px;
             margin-bottom: 30px;
+            
         }
 
         nav {
@@ -85,15 +86,10 @@
             transition: all 0.3s ease;
         }
 
-        /* nav ul li a:hover {
-            color: #075cb0;
-        }
-       */
-
         nav ul li a:hover {
-            background-color: #075cb0;
-            color: white;
-            transform: translateY(-2px);
+            /* background-color: #075cb0; */
+            color:blue;
+            /* transform: translateY(-2px); */
         }
         .logo-title {
             text-align: center;
@@ -303,13 +299,119 @@ h1, h2, h3 {
     --accent-color: #f0f8ff;
     --text-color: #333;
 }
+.dropdown {
+    position: relative;  /* Add this */
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;  /* Increased z-index */
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;  /* Position relative to parent */
+    left: 50%;  /* Center horizontally */
+    transform: translateX(-50%);  /* Center horizontally */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;  /* Left-align text */
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #0056b3;
+    padding-left: 20px;  /* Add slight indent on hover */
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;  /* Add animation */
+}
+
+/* Add animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+/* Optional: Add a small arrow/triangle */
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+                       .lab-resources {
+                            padding: 2rem;
+                            background-color: #f8f9fa;
+                            border-radius: 12px;
+                            margin: 2rem 0;
+                        }
+                    
+                        .resource-section {
+                            margin: 1.5rem 0;
+                        }
+                    
+                        .resource-section h3 {
+                            color: #2c3e50;
+                            margin-bottom: 1rem;
+                        }
+                    
+                        .resource-section ul {
+                            list-style-type: none;
+                            padding-left: 0;
+                        }
+                    
+                        .resource-section ul li {
+                            padding: 0.5rem 0;
+                            position: relative;
+                            padding-left: 1.5rem;
+                        }
+                    
+                        .resource-section ul li:before {
+                            content: "•";
+                            color: #3498db;
+                            font-weight: bold;
+                            position: absolute;
+                            left: 0;
+                        }
     </style>
 </head>
 <body>
     <div class="top-section">
         <nav>
             <ul>
-                <li><a href="publications.html">Publications</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Publications <span class="arrow" style="font-weight: normal;
+                        font-size: 0.8em;">&#9660;</span></a>
+                    <div class="dropdown-content">
+                      <a href="conferences.html">Conferences</a>
+                      <a href="journals.html">Journals</a>
+                      <a href="patents.html">Patents</a>
+                      <a href="books.html">Books</a>
+                    </div>
+                  </li>
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="news.html">News</a></li>
@@ -318,7 +420,7 @@ h1, h2, h3 {
         </nav>
         <div class="logo-title">
             <h1>TRAIL</h1>
-            <p><span class="highlight">TR</span>ustworthy <span class="highlight">A</span>I <span class="highlight">L</span>ab</p>
+            <p><span class="highlight">TR</span>ustworthy <span class="highlight">AI</span> <span class="highlight">L</span>ab</p>
             <p>Advancing Trustworthy AI and Biometrics Research</p>
         </div>
     </div>
@@ -326,18 +428,18 @@ h1, h2, h3 {
     <main>
         <div class="lab-container">
             <div class="side-image">
-                <img src="static/elicot-creek-trail2.png" alt="TRAIL Lab Left">
+                <img src="static/forest-1868028_640.jpg" alt="TRAIL Lab Left">
             </div>
             
             <div class="content-wrapper">
                 <!-- Keep your existing content sections here -->
                 <!-- Your sections for AI Overview, Trustworthy AI, Welcome to TRAIL, etc. -->
-                <section id="ai-overview">
+                <!-- <section id="ai-overview">
                     <h2>Understanding Artificial Intelligence</h2>
                     <p>Artificial Intelligence (AI) represents the cutting edge of computer science, enabling machines to simulate human intelligence through learning, reasoning, and self-correction. AI systems can analyze complex data, recognize patterns, make decisions, and continuously improve their performance through experience.</p>
-                  </section>
+                  </section> -->
                 
-                  <section id="trustworthy-ai">
+                  <!-- <section id="trustworthy-ai">
                     <h2>Trustworthy AI</h2>
                     <p>Trustworthy AI encompasses systems that are reliable, transparent, fair, and ethically sound. It focuses on developing AI solutions that respect privacy, ensure accountability, and maintain human oversight. Key aspects include:</p>
                     <div class="highlight-section">
@@ -349,19 +451,19 @@ h1, h2, h3 {
                         <li>Ethical considerations and societal impact</li>
                       </ul>
                     </div>
-                  </section>    
+                  </section>     -->
                   <section id="home">
                       <h2>Welcome to TRAIL</h2>
                       <div class="lab-section">
-                          <div class="lab-text">
-                              <p>The Trustworthy AI Lab (TRAIL) is at the forefront of cutting-edge research in trustworthy AI systems, biometrics, and computer vision. Our mission is to develop robust, fair, and secure AI technologies that can be relied upon in critical applications.</p>
-                              
-                              <p>At TRAIL, we focus on addressing key challenges in AI trustworthiness, including bias mitigation, fairness in machine learning, and the security of AI systems. Our interdisciplinary team combines expertise in computer science, data science, and ethics to create AI solutions that are not only technologically advanced but also socially responsible.</p>
-                              
-                              <p>Our lab collaborates with industry partners and academic institutions worldwide, organizing workshops at prestigious conferences such as CVPR, ECCV, and ICCV. These events cover critical topics like bias in AI, blockchain applications, and advanced biometric technologies.</p>
-                              
-                              <p>TRAIL is led by  <a href="sir_page.html", style="text-decoration: none;">Dr. Nalini K. Ratha</a>, a distinguished researcher in the field of biometrics and AI. Under his guidance, our team of researchers and students works on projects that push the boundaries of what's possible in trustworthy AI and biometric systems.</p>
-                          </div>
+                        <div class="lab-text">
+                            <p>The Trustworthy AI Lab (TRAIL) at the University at Buffalo (SUNY) is at the forefront of cutting-edge research in trustworthy AI systems, biometrics, and privacy-enhanced computing. Our mission is to develop robust, fair, and secure AI technologies that can be relied upon in critical applications, from healthcare diagnostics to biometric systems.</p>
+                            
+                            <p>At TRAIL, we focus on addressing key challenges in AI trustworthiness, including privacy preservation, bias mitigation, and fairness in machine learning. Our interdisciplinary team combines expertise in computer science, data science, and ethics to create AI solutions that are not only technologically advanced but also socially responsible. Current projects include developing privacy-preserving algorithms for medical data analysis, including innovative work on sleep apnea diagnostics.</p>
+                            
+                            <p>Our lab collaborates with industry partners and academic institutions worldwide, organizing workshops at prestigious conferences such as CVPR, ECCV, and ICCV. These events cover critical topics like bias in AI, privacy-enhanced computing, and advanced biometric technologies.</p>
+                            
+                            <p>TRAIL is led by <a href="sir_page.html" style="text-decoration: none;">Dr. Nalini K. Ratha</a>, an Empire Innovation Professor in the Department of Computer Science and Engineering. Under his guidance, our team of researchers and students works on projects that push the boundaries of what's possible in trustworthy AI, privacy-preserving computing, and biometric systems.</p>
+                        </div>
                          
                       </div>
                       
@@ -387,6 +489,29 @@ h1, h2, h3 {
                               <li>Building robust AI systems for healthcare diagnostics</li>
                           </ul>
                       </div>
+                  </section>
+                  <section id ="lab-resources">
+                    <div class="lab-resources">
+                        <h2>Lab Resources & Infrastructure</h2>
+                        
+                        <div class="resource-section">
+                            <h3>Funding & Grants</h3>
+                            <ul>
+                                <li>National Science Foundation (NSF) Grant #XXXXXXX</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="resource-section">
+                            <h3>Computing Infrastructure</h3>
+                            <ul>
+                                <li>6 Nvidia A100 GPUs</li>
+                                <li> 10TB distributed storage</li>
+                            </ul>
+                        </div>
+                
+                    </div>
+                    
+                
                   </section>
           
                   <!-- Other sections (research, publications, team, etc.) can be added here -->
@@ -430,7 +555,7 @@ h1, h2, h3 {
             </div>
 
             <div class="side-image">
-                <img src="static/elicot-creek-trail2.png" alt="TRAIL Lab Right">
+                <img src="static/forest-1868028_640.jpg" alt="TRAIL Lab Right">
             </div>
         </div>
     </main>
